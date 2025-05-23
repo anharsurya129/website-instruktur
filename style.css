@@ -1,0 +1,836 @@
+:root {
+    --maroon: #800000;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0 /0.5);
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+    /*min-height: 4000px;*/
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/bg-home.jpeg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(6px);
+    background-blend-mode: multiply; /* atau multiply */
+    background-color: rgba(0, 0, 0, 0.8); /* hitam setengah transparan */
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero h1, .hero h2, .hero h4, .hero p {
+    text-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-family: "Cabin", sans-serif; /* Diubah dari Sacramento */
+    font-size: 6rem;
+}
+
+.logo-instruktur {
+    max-width: 500px;  /* Biar tidak kebesaran */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.hero h2 {
+    font-family: "Cabin", sans-serif; /* Diubah dari Cabin, sans-serif (sudah Cabin) */
+    font-size: 4rem;
+}
+
+.hero h4 {
+ font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero a {
+    color: var(--maroon);
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+    background-color: var(--maroon);
+    color: white;
+}
+
+/* MODIFIED NAVBAR STYLE START */
+.mynavbar {
+    background-color: white !important; /* Latar belakang putih solid */
+    backdrop-filter: none; /* Hapus efek blur */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Tambah bayangan tipis */
+}
+
+.mynavbar .offcanvas {
+    height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+    font-family: 'Cabin', sans-serif; /* Diubah dari Sacramento */
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.mynavbar .nav-link {
+    /*text-transform: uppercase;*/
+    color: #333; /* Warna teks default yang lebih gelap */
+    transition: color 0.3s ease; /* Transisi halus untuk perubahan warna */
+}
+
+.mynavbar .nav-link:hover {
+    color: var(--maroon); /* Warna marun saat di-hover */
+}
+
+/* Gaya untuk dropdown menu agar mengikuti tema */
+.navbar .dropdown-menu {
+    border: none; /* Hapus border default jika ada */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Tambahkan bayangan */
+}
+
+.mynavbar .dropdown-item {
+    color: #333; /* Warna teks default untuk item dropdown */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transisi halus */
+}
+
+.mynavbar .dropdown-item:hover {
+    background-color: rgba(128, 0, 0, 0.1); /* Latar belakang transparan atau sangat samar saat di-hover */
+    color: var(--maroon); /* Warna marun saat di-hover */
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+/* MODIFIED NAVBAR STYLE END */
+
+
+/* Hapus .home h2 dari selector ini, karena sekarang namanya .kepemimpinan-periode */
+.info h2,
+.story h2,
+.gallery h2,
+.rsvp h2,
+.gifts h2 {
+    color: var(--maroon);
+    font-family: 'Cabin', sans-serif; /* Diubah dari Sacramento */
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: var(--shadow);
+}
+
+/* Tambahkan aturan spesifik untuk kepemimpinan-section h2 */
+.kepemimpinan-section {
+    background-color: #f8f9fa; /* Warna latar belakang cerah */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.kepemimpinan-section h2 {
+    color: var(--maroon); /* Menggunakan warna maroon dari variabel */
+    font-family: 'Cabin', sans-serif; /* Diubah dari Sacramento */
+    font-size: 3rem; /* UKURAN YANG DIINGINKAN */
+    font-weight: bold;
+    text-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+.kepemimpinan-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+.kepemimpinan-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+.home { /* Ini adalah section 'home' lama yang mungkin sudah tidak dipakai di index.html tapi ada stylenya */
+    background-image: url(img/bg2.avif);
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -6rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.home h3 {
+    color: #444;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.home .couple {
+    margin-top: 100px;
+}
+
+.home .couple h3 {
+    font-family: 'Cabin', sans-serif; /* Diubah dari Sacramento */
+    font-size: 3.4rem;
+    color: var(--maroon);
+}
+
+.home .couple img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover; /* Biar gambar tetap proporsional */
+}
+
+.home .heart {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(75px);
+}
+
+.home .heart i {
+    margin: auto;
+    color: var(--maroon);
+}
+
+.info {
+    background-color: var(--bg);
+    color: white;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.info .alamat {
+    font-size: 1.1rem;
+}
+
+.info .description {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.info .card {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 1px solid #999;
+}
+
+.info .card-header {
+    border-bottom: 1px solid #999;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.info .card-body {
+    font-size: 1rem;
+}
+
+.info .card-footer {
+    border-top: 1px solid #999;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.story,
+.gallery,
+.rsvp,
+.gifts {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.story span,
+.gallery span,
+.gifts span {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/*.story {
+    background-image: url(img/bg3.jpg);
+    background-size: cover;
+}*/
+
+.gallery {
+    background-image: url(img/bg3.jpg);
+    background-size: cover;
+}
+
+.story p,
+.gallery p,
+.rsvp p,
+.gifts p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.timeline {
+    list-style: none;
+    padding: 1.4rem 0;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #ccc;
+    left: 50%;
+}
+
+.timeline li {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline li::before,
+.timeline li::after {
+    content: '';
+    display: table;
+}
+
+.timeline li::after {
+    clear: both;
+}
+
+.timeline li .timeline-image {
+    width: 160px;
+    height: 160px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+    width: 40%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.timeline li .timeline-panel::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    top: 80px;
+    right: -15px;
+}
+
+.timeline li .timeline-panel::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid #fff;
+    border-right: 0 solid #fff;
+    top: 81px;
+    right: -13px;
+}
+
+.timeline li.timeline-inverted .timeline-panel {
+    float: right;
+}
+
+.timeline li.timeline-inverted .timeline-panel::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+
+.timeline li.timeline-inverted .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+}
+
+.gallery {
+    background-color: #f5f5f5;
+}
+
+.rsvp {
+    background-color: var(--bg);
+}
+
+.rsvp h2 {
+    font-size: 4.5rem;
+}
+
+.rsvp p {
+    color: white;
+}
+
+.rsvp form label {
+    color: white;
+}
+  
+.rsvp button {
+    background-color: var(--pink);
+    color: white;
+    border: 1px solid var(--pink);
+}
+
+.rsvp button:hover {
+    background-color: white;
+    color: var(--pink);
+    border: 1px solid white;
+}
+
+footer{
+    padding: 3rem;
+    background-color: var(--pink);
+    color: white;
+}
+
+footer a {
+    color: var(--bg);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer li {
+    list-style: none;
+    display: inline;
+    margin: 0.5rem;
+}
+
+      /* Tambahan CSS khusus untuk bagian pengenalan kepemimpinan */
+      .kepemimpinan-section {
+        background-color: #f8f9fa; /* Warna latar belakang cerah */
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      .kepemimpinan-section h2 {
+        color: var(--maroon); /* Menggunakan warna maroon dari variabel */
+        font-family: 'Cabin', sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: var(--shadow);
+        margin-bottom: 2rem;
+      }
+      .kepemimpinan-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+      }
+      .kepemimpinan-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      /* CSS untuk Carousel Opini & Publikasi */
+      .publikasi-carousel-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        background-color: #f8f9fa; /* Latar belakang abu-abu muda */
+      }
+      .publikasi-carousel-section .carousel-inner {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      }
+      .publikasi-carousel-section .carousel-item {
+        background-color: #333; /* Background gelap untuk teks putih */
+        color: white;
+        text-align: center;
+        position: relative; /* Penting untuk carousel-caption */
+      }
+      .publikasi-carousel-section .carousel-caption {
+        position: absolute; /* Kembali ke absolut untuk overlay */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.6); /* Overlay gelap pada gambar */
+        text-align: left;
+      }
+      .publikasi-carousel-section .carousel-caption h5 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      }
+      .publikasi-carousel-section .carousel-caption p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      .publikasi-carousel-section .carousel-caption .meta-info {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 1rem;
+      }
+      .publikasi-carousel-section .carousel-caption .meta-info i {
+        margin-right: 0.3rem;
+      }
+      .publikasi-carousel-section .carousel-caption img.author-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+
+      /* Gambar di dalam Carousel */
+      .publikasi-carousel-section .carousel-item img {
+        width: 100%;
+        height: 450px; /* Tinggi gambar carousel */
+        object-fit: cover; /* Pastikan gambar mengisi area */
+        filter: brightness(70%); /* Sedikit lebih gelap agar teks terbaca */
+      }
+      
+      /* Tombol Baca Selengkapnya */
+      .btn-read-more-carousel {
+        background-color: var(--maroon);
+        color: white;
+        border: 1px solid var(--maroon);
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: inline-block;
+        font-weight: bold;
+      }
+      .btn-read-more-carousel:hover {
+        background-color: white;
+        color: var(--maroon);
+      }
+
+      /* INDIKATOR GARIS WAKTU TUNGGAL */
+      .carousel-indicators {
+          position: absolute;
+          bottom: 0; /* Letakkan di paling bawah caption */
+          left: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          display: block; /* Agar mengambil seluruh lebar */
+          height: 5px; /* Tinggi total indikator */
+          z-index: 10;
+          list-style: none; /* Hapus bullet point */
+      }
+      /* Hanya satu button yang akan aktif dan dianimasikan */
+      .carousel-indicators button {
+          display: block; /* Agar indikator mengambil lebar penuh */
+          width: 100%;
+          height: 5px; /* Tinggi garis */
+          background-color: rgba(255, 255, 255, 0.3); /* Warna abu-abu transparan untuk latar belakang garis */
+          border: none; /* Hapus border */
+          padding: 0;
+          opacity: 1; /* Selalu terlihat */
+          cursor: default; /* Tidak bisa diklik */
+          transition: none; /* Hapus transisi default Bootstrap */
+          position: relative; /* Untuk pseudo-element */
+          overflow: hidden; /* Sembunyikan overflow animasi */
+          border-radius: 0;
+      }
+      .carousel-indicators button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background-color: #ffc107; /* Warna kuning */
+          width: 0; /* Mulai dari lebar 0 */
+          transform-origin: left;
+          animation: none; /* Defaultnya tidak ada animasi */
+      }
+
+      .carousel-indicators button.active::before {
+          animation: fillLine 5s linear forwards; /* Animasi mengisi dalam 5 detik */
+      }
+
+      @keyframes fillLine {
+          from {
+              width: 0;
+          }
+          to {
+              width: 100%;
+          }
+      }
+
+      /* CSS untuk Section Instagram Preview */
+      .instagram-preview-section {
+          background-color: var(--maroon); /* Warna latar belakang merah marun */
+          padding: 5rem 0;
+          color: white;
+      }
+      .instagram-preview-section .header-instagram {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3rem;
+          padding: 0 1rem; /* Padding horizontal */
+      }
+      .instagram-preview-section .header-instagram h2 {
+          font-family: 'Cabin', sans-serif;
+          font-size: 3rem;
+          font-weight: bold;
+          text-shadow: var(--shadow);
+          margin-bottom: 0;
+      }
+      .instagram-preview-section .header-instagram .follow-btn {
+          background-color: white;
+          color: var(--maroon);
+          border: 1px solid white;
+          padding: 0.5rem 1.5rem;
+          border-radius: 5px;
+          text-decoration: none;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          font-weight: bold;
+      }
+      .instagram-preview-section .header-instagram .follow-btn:hover {
+          background-color: transparent;
+          color: white;
+      }
+      .instagram-preview-section .instagram-grid img {
+          width: 100%;
+          height: 250px; /* Tinggi gambar Instagram */
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+          transition: transform 0.3s ease;
+      }
+      .instagram-preview-section .instagram-grid img:hover {
+          transform: scale(1.05);
+      }
+
+      /* CSS untuk Tombol Back to Top */
+      #back-to-top-btn {
+          display: none; /* Sembunyikan secara default */
+          position: fixed; /* Posisi tetap di layar */
+          bottom: 20px; /* 20px dari bawah */
+          right: 30px; /* 30px dari kanan */
+          z-index: 99; /* Pastikan di atas elemen lain */
+          border: none; /* Hapus border */
+          outline: none; /* Hapus outline saat fokus */
+          background-color: var(--maroon); /* Warna latar belakang */
+          color: white; /* Warna ikon */
+          cursor: pointer; /* Tampilan kursor saat di-hover */
+          padding: 15px;
+          border-radius: 50%; /* Bentuk lingkaran */
+          font-size: 24px; /* Ukuran ikon */
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      #back-to-top-btn:hover {
+          background-color: #a00000; /* Warna lebih gelap saat di-hover */
+          transform: translateY(-3px); /* Efek sedikit naik */
+      }
+
+      /* CSS untuk Footer Baru */
+      .main-footer {
+          background-color: #222; /* Latar belakang gelap untuk footer */
+          color: #eee;
+          padding: 3rem 0;
+          font-size: 0.95rem;
+      }
+      .main-footer .footer-col h5 {
+          font-family: 'Cabin', sans-serif;
+          color: #fff;
+          font-size: 1.25rem;
+          margin-bottom: 1.5rem;
+          border-bottom: 2px solid var(--maroon); /* Garis bawah marun */
+          padding-bottom: 0.5rem;
+          display: inline-block; /* Agar garis bawah pas di lebar judul */
+      }
+      .main-footer .footer-col ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+      .main-footer .footer-col ul li {
+          margin-bottom: 0.75rem;
+      }
+      .main-footer .footer-col ul li a {
+          color: #ccc;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+      .main-footer .footer-col ul li a:hover {
+          color: var(--maroon);
+      }
+      .main-footer .footer-logo {
+          max-width: 150px;
+          margin-bottom: 1rem;
+      }
+      .main-footer .footer-social-icons {
+          margin-top: 1.5rem;
+      }
+      .main-footer .footer-social-icons a {
+          color: #eee;
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          transition: color 0.3s ease;
+      }
+      .main-footer .footer-social-icons a:hover {
+          color: var(--maroon);
+      }
+      .main-footer .copyright-text {
+          margin-top: 2.5rem;
+          padding-top: 1.5rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          text-align: center;
+          color: #aaa;
+      }
+
+/*width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    right: -15px;
+    top: 70px;
+    transform: rotate(45deg);
+    z-index: -1;
+/* Media Query */
+/* Extra Large */
+@media (max-width: 992px) {
+    .home .heart {
+        transform: translateX(-50%) translateY(45px);
+    }
+}
+/* laptop */
+@media (max-width: 992px) {
+    html {
+        font-size: 75%;
+    }
+    .simply-countdown > .simply-section {
+        padding: 70px;
+    }   
+    .home .heart {
+        display: none;
+    }
+
+    .timeline::before {
+        left: 60px;
+    }
+
+    .timeline li .timeline-image {
+        left: 15px;
+        margin-left: 45px;
+        top: 16px;
+    }
+
+    .timeline li .timeline-panel {
+        width: calc(100% - 200px);
+        float: right;
+    }
+
+    .timeline li .timeline-panel::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+    }
+}
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+    .simply-countdown > .simply-section {
+        padding: 60px;
+        margin: 5px;
+    }
+    .mynavbar .nav-link {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .sticky-top {
+        overflow: hidden;
+    }
+
+    .timeline li .timeline-image {
+        width: 140px;
+        height: 140px;
+    }
+}
+/* mobile phone */
+@media (max-width: 576px) {
+    html {
+        font-size: 60%;
+    }
+    .simply-countdown > .simply-section {
+        padding: 45px;
+        margin: 3px;
+    }   
+
+    .timeline li .timeline-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .timeline li .timeline-panel {
+        width: 70%;
+        transform: translateX(-20px);
+    }
+
+    .timeline li .timeline-panel::before {
+        top: 30px;
+    }
+
+    .timeline li .timeline-panel::after {
+        top: 31px;
+    }
+}

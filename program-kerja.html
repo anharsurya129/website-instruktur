@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Program Kerja Korps Instruktur Djazman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Custom CSS for Program Kerja Page */
+      .program-section {
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        background-color: #f8f9fa; /* Light background for the section */
+      }
+      .program-section h2 {
+        color: var(--maroon);
+        font-family: "Cabin", sans-serif;
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: var(--shadow);
+        margin-bottom: 3rem;
+      }
+      .program-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .program-item img {
+        max-width: 100%;
+        height: 200px; /* Ukuran tetap untuk gambar */
+        object-fit: cover; /* Pastikan gambar mengisi ruang */
+        border-radius: 8px;
+        margin-top: 1rem; /* Jarak dari judul */
+        margin-bottom: 1.5rem;
+      }
+      .program-item h3 {
+        color: var(--maroon);
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+      .program-item .badge {
+        /* Mengatur font-size ke ukuran standar badge Bootstrap (0.75em dari parent font-size) */
+        /* Mengatur padding agar latar belakang kompak */
+        font-size: 0.85em; /* Ukuran tulisan badge yang nyaman dibaca */
+        padding: 0.4em 0.8em; /* Padding horizontal dan vertikal yang sedikit lebih luas */
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+        display: inline-block; /* Penting agar background mengikuti lebar konten */
+        line-height: 1; /* Membantu kekompakan vertikal */
+        border-radius: 0.25rem; /* Menjaga sudut badge agar tidak terlalu melengkung */
+      }
+      .program-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+        flex-grow: 1; /* Agar paragraf bisa mengisi ruang */
+      }
+      .program-item small {
+        display: block;
+        margin-top: 1rem;
+        color: #777;
+      }
+      .program-item .btn {
+          align-self: flex-start; /* Tombol berada di kiri bawah item */
+      }
+      .program-category {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+      }
+      .program-category h3 {
+        color: #333;
+        border-bottom: 2px solid var(--maroon);
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        font-family: "Cabin", sans-serif;
+        font-size: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md bg-white sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo Korps Instruktur" height="40"></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AndSign</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <div class="navbar-nav ms-auto">
+                  <a class="nav-link" href="index.html#kepemimpinan-periode">Beranda</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="organisasiDropdown" role="button" aria-expanded="false">
+                      Organisasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="organisasiDropdown">
+                      <li><a class="dropdown-item" href="struktural.html">Struktural</a></li>
+                      <li><a class="dropdown-item" href="bidang.html">Bidang</a></li>
+                      <li><a class="dropdown-item" href="program-kerja.html">Program Kerja</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publikasiDropdown" role="button" aria-expanded="false">
+                      Publikasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="publikasiDropdown">
+                      <li><a class="dropdown-item" href="opini.html">Opini</a></li>
+                      <li><a class="dropdown-item" href="rilis-kegiatan.html">Rilis Kegiatan</a></li>
+                    </ul>
+                  </li>
+                  <a class="nav-link" href="#gallery">Layanan Kader</a>
+                  <a class="nav-link" href="#rsvp">Tentang</a>
+                  <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
+                    <i class="bi bi-search"></i> </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="collapse" id="searchBar">
+        <div class="py-3 bg-white border-bottom">
+          <div class="container">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Cari di website..." aria-label="Cari di website">
+              <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <section id="program-kerja" class="program-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-10">
+            <h2>Program Kerja Organisasi</h2>
+            <p class="lead">Berikut adalah daftar program kerja Korps Instruktur PC IMM Djazman Al Kindi untuk periode saat ini dan yang akan datang.</p>
+          </div>
+        </div>
+
+        <div class="program-category mt-5">
+          <div class="row">
+            <div class="col-12 text-start">
+              <h3>Program Kerja Korps Instruktur</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>Upgrading Korps Instruktur 2025/2026</h3>
+                <img src="img/program-kerja/upgrading.jpg" alt="Upgrading Korps Instruktur" class="img-fluid rounded">
+                <span class="badge bg-success">Berlangsung</span> <span class="badge bg-info">Tahunan</span>
+                <p>Program utama untuk membekali calon instruktur dengan dasar-dasar keinstrukturan dan pemahaman organisasi, membentuk kader yang siap memimpin.</p>
+                <small>Periode: Mei - Juni 2025</small>
+                <a href="program-detail.html?id=upgrading" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>Diskusi Perkaderan</h3>
+                <img src="img/program-kerja/diskusi-perkaderan.jpg" alt="Diskusi Perkaderan" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Triwulanan</span>
+                <p>Forum diskusi rutin untuk mengembangkan dan memperbarui modul-modul pelatihan agar sesuai dengan kebutuhan kader yang dinamis.</p>
+                <small>Periode: Juli 2025</small>
+                <a href="program-detail.html?id=diskusi-perkaderan" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="program-category">
+          <div class="row">
+            <div class="col-12 text-start">
+              <h3>Darul Arqam Dasar (DAD) Cabang</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM FAI UAD</h3>
+                <img src="img/program-kerja/dad-fai.webp" alt="DAD IMM FAI UAD" class="img-fluid rounded">
+                <span class="badge bg-success">Berlangsung</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Agama Islam Universitas Ahmad Dahlan, sebagai langkah awal perkaderan.</p>
+                <small>Periode: September 2025</small>
+                <a href="program-detail.html?id=dad-fai" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM BPP UAD</h3>
+                <img src="img/program-kerja/dad-bpp.jpg" alt="DAD IMM BPP UAD" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Bisnis, Pendidikan, dan Psikologi Universitas Ahmad Dahlan.</p>
+                <small>Periode: Oktober 2025</small>
+                <a href="program-detail.html?id=dad-bpp" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM FAST UAD</h3>
+                <img src="img/program-kerja/dad-fast.jpg" alt="DAD IMM FAST UAD" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Sains dan Teknologi Terapan Universitas Ahmad Dahlan.</p>
+                <small>Periode: Oktober 2025</small>
+                <a href="program-detail.html?id=dad-fast" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM FTI UAD</h3>
+                <img src="img/program-kerja/dad-fti.jpg" alt="DAD IMM FTI UAD" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Teknologi Industri Universitas Ahmad Dahlan.</p>
+                <small>Periode: November 2025</small>
+                <a href="program-detail.html?id=dad-fti" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM Farmasi UAD</h3>
+                <img src="img/program-kerja/dad-farmasi.jpg" alt="DAD IMM Farmasi UAD" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Farmasi Universitas Ahmad Dahlan.</p>
+                <small>Periode: November 2025</small>
+                <a href="program-detail.html?id=dad-farmasi" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM FK UAD</h3>
+                <img src="img/program-kerja/dad-fk.jpg" alt="DAD IMM FK UAD" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Kedokteran Universitas Ahmad Dahlan.</p>
+                <small>Periode: Desember 2025</small>
+                <a href="program-detail.html?id=dad-fk" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="program-item">
+                <h3>DAD IMM Psikologi UAD</h3>
+                <img src="img/program-kerja/dad-psikologi.jpg" alt="DAD IMM Psikologi UAD" class="img-fluid rounded">
+                <span class="badge bg-warning text-dark">Akan Datang</span> <span class="badge bg-info">Tahunan</span>
+                <p>Darul Arqam Dasar untuk kader IMM Fakultas Psikologi Universitas Ahmad Dahlan.</p>
+                <small>Periode: Desember 2025</small>
+                <a href="program-detail.html?id=dad-psikologi" class="btn btn-primary btn-sm mt-3">Lihat Detail</a>
+              </div>
+            </div>
+            
+            </div>
+        </div>
+        
+        </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <img src="img/logo.png" alt="Logo Korps Instruktur" class="footer-logo">
+            <p>Korps Instruktur PC IMM Djazman Al Kindi Kota Yogyakarta adalah wadah pengembangan kader instruktur yang profesional dan berintegritas.</p>
+            <div class="footer-social-icons">
+              <a href="https://instagram.com/pciimmdjazmanalkindi" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h5>Tautan Cepat</h5>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="struktural.html">Struktural</a></li>
+              <li><a href="bidang.html">Bidang</a></li>
+              <li><a href="program-kerja.html">Program Kerja</a></li>
+              <li><a href="opini.html">Opini</a></li>
+              <li><a href="rilis-kegiatan.html">Rilis Kegiatan</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h5>Kontak Kami</h5>
+            <ul>
+              <li><i class="bi bi-geo-alt-fill"></i> Jl. Sultan Agung No.14, Wirogunan, Kec. Mergangsan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55151</li>
+              <li><i class="bi bi-envelope-fill"></i> neokorpsinstrukturdjazman@gmail.com</li>
+              <li><i class="bi bi-phone-fill"></i> +62 812-3456-7890</li>
+            </ul>
+            <p class="mt-3">Jam Kerja: Setiap hari sampe kiamat, kecuali lagi tidur</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="copyright-text">© 2025 Korps Instruktur Djazman. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+
+      offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible';
+      });
+
+      offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+      });
+    </script>
+  </body>
+</html>

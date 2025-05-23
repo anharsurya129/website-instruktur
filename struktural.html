@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Struktural Korps Instruktur Djazman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lavishly+Yours&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Custom CSS for Struktural Page */
+      .struktural-section {
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        background-color: #f8f9fa; /* Light background for the section */
+      }
+      .struktural-section h2 {
+        color: var(--maroon);
+        font-family: "Cabin", sans-serif;
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: var(--shadow);
+        margin-bottom: 3rem;
+      }
+      .struktural-item {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center; /* Pusatkan teks dan gambar */
+      }
+      .struktural-item img {
+        width: 300px; /* Ukuran gambar */
+        height: 400px;
+        border-radius: 20%; /* Membuat gambar lingkaran */
+        object-fit: cover; /* Pastikan gambar proporsional */
+        margin-bottom: 1.5rem;
+        /* border: 4px solid var(--maroon); /* Border di sekitar foto */
+      }
+      .struktural-item h3 {
+        color: var(--maroon);
+        margin-bottom: 0.5rem; /* Kurangi margin bawah judul */
+        font-size: 1.8rem; /* Sedikit lebih besar untuk nama */
+      }
+      .struktural-item .jabatan {
+          font-weight: bold;
+          color: #555;
+          margin-bottom: 1rem;
+          display: block;
+      }
+      .struktural-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md bg-white sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo Korps Instruktur" height="40"></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AndSign</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <div class="navbar-nav ms-auto">
+                  <a class="nav-link" href="index.html#kepemimpinan-periode">Beranda</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="organisasiDropdown" role="button" aria-expanded="false">
+                      Organisasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="organisasiDropdown">
+                      <li><a class="dropdown-item" href="struktural.html">Struktural</a></li>
+                      <li><a class="dropdown-item" href="bidang.html">Bidang</a></li>
+                      <li><a class="dropdown-item" href="program-kerja.html">Program Kerja</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publikasiDropdown" role="button" aria-expanded="false">
+                      Publikasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="publikasiDropdown">
+                      <li><a class="dropdown-item" href="opini.html">Opini</a></li>
+                      <li><a class="dropdown-item" href="rilis-kegiatan.html">Rilis Kegiatan</a></li>
+                    </ul>
+                  </li>
+                  <a class="nav-link" href="#gallery">Layanan Kader</a>
+                  <a class="nav-link" href="#rsvp">Tentang</a>
+                  <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
+                    <i class="bi bi-search"></i> </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="collapse" id="searchBar">
+        <div class="py-3 bg-white border-bottom">
+          <div class="container">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Cari di website..." aria-label="Cari di website">
+              <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <section id="struktural" class="struktural-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-10">
+            <h2>Struktur Organisasi</h2>
+            <p class="lead">Berikut adalah jajaran kepengurusan Korps Instruktur PC IMM Djazman Al Kindi Kota Yogyakarta periode 2025-2026.</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <div class="struktural-item">
+              <img src="img/struktural/ketua-umum.jpg" alt="Foto Ketua Umum">
+              <h3>IMMawati Maulida Rifqi Rusydiani</h3>
+              <span class="jabatan">Ketua Umum</span>
+              <p>Bertanggung jawab penuh atas seluruh jalannya organisasi dan menjadi representasi utama Korps Instruktur, dengan semangat perkaderan menggembirakan.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="struktural-item">
+              <img src="img/struktural/sekretaris-umum.jpg" alt="Foto Sekretaris">
+              <h3>Caca & Dita</h3>
+              <span class="jabatan">Sekretaris</span>
+              <p>Mengelola administrasi, persuratan, dan dokumentasi organisasi serta mendukung Ketua Umum dalam setiap kebijakan strategis.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="struktural-item">
+              <img src="img/struktural/bendahara-umum.jpg" alt="Foto Bendahara">
+              <h3>Mila Abusri</h3>
+              <span class="jabatan">Bendahara</span>
+              <p>Mengelola keuangan organisasi secara transparan dan akuntabel, termasuk pemasukan dan pengeluaran dana untuk kegiatan.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="struktural-item">
+              <img src="img/struktural/psdi.webp" alt="Foto Koordinator Bidang PSDI">
+              <h3>Rahmat Sabili</h3>
+              <span class="jabatan">Koordinator Bidang Pengembangan Sumber Daya Instruktur</span>
+              <p>Bertanggung jawab dalam pengembangan kualitas kader, baik dari segi ideologi maupun kemampuan teknis instruktur.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="struktural-item">
+              <img src="img/struktural/p2k.webp" alt="Foto Koordinator Bidang P2K">
+              <h3>Fayadh Abdillah</h3>
+              <span class="jabatan">Koordinator Divisi Riset dan Pengembangan</span>
+              <p>Melakukan kajian, penelitian, dan pengembangan materi-materi keinstrukturan serta inovasi program.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="struktural-item">
+              <img src="img/struktural/media.webp" alt="Foto Koordinator Bidang Media">
+              <h3>Muh. Alfi Romadhon</h3>
+              <span class="jabatan">Koordinator Divisi Media dan Komunikasi</span>
+              <p>Mengelola publikasi organisasi, media sosial, dan menjalin komunikasi internal maupun eksternal.</p>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <img src="img/logo.png" alt="Logo Korps Instruktur" class="footer-logo">
+            <p>Korps Instruktur PC IMM Djazman Al Kindi Kota Yogyakarta adalah wadah pengembangan kader instruktur yang profesional dan berintegritas.</p>
+            <div class="footer-social-icons">
+              <a href="https://instagram.com/pciimmdjazmanalkindi" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h5>Tautan Cepat</h5>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="struktural.html">Struktural</a></li>
+              <li><a href="bidang.html">Bidang</a></li>
+              <li><a href="program-kerja.html">Program Kerja</a></li>
+              <li><a href="opini.html">Opini</a></li>
+              <li><a href="rilis-kegiatan.html">Rilis Kegiatan</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h5>Kontak Kami</h5>
+            <ul>
+              <li><i class="bi bi-geo-alt-fill"></i> Jl. Sultan Agung No.14, Wirogunan, Kec. Mergangsan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55151</li>
+              <li><i class="bi bi-envelope-fill"></i> neokorpsinstrukturdjazman@gmail.com</li>
+              <li><i class="bi bi-phone-fill"></i> +62 812-3456-7890</li>
+            </ul>
+            <p class="mt-3">Jam Kerja: Setiap hari sampe kiamat, kecuali lagi tidur</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="copyright-text">© 2025 Korps Instruktur Djazman. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+
+      offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible';
+      });
+
+      offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+      });
+    </script>
+  </body>
+</html>

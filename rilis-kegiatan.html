@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rilis Kegiatan - Publikasi | Korps Instruktur Djazman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .rilis-page-section {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
+            background-color: #f8f9fa;
+        }
+        .rilis-page-section h2 {
+            color: var(--maroon);
+            font-family: "Cabin", sans-serif;
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .rilis-page-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            height: 100%;
+        }
+        .rilis-page-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .rilis-page-card .card-body {
+            padding: 1.5rem;
+        }
+        .rilis-page-card .meta-info {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+        .rilis-page-card .meta-info i {
+            margin-right: 0.3rem;
+        }
+        .rilis-page-card .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .rilis-page-card .card-text {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        .rilis-page-card .btn-read-more {
+            color: var(--maroon);
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .rilis-page-card .btn-read-more:hover {
+            color: #a00000;
+            text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md bg-white sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo Korps Instruktur" height="40"></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AndSign</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <div class="navbar-nav ms-auto">
+                  <a class="nav-link" href="index.html#kepemimpinan-periode">Beranda</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="organisasiDropdown" role="button" aria-expanded="false">
+                      Organisasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="organisasiDropdown">
+                      <li><a class="dropdown-item" href="struktural.html">Struktural</a></li>
+                      <li><a class="dropdown-item" href="bidang.html">Bidang</a></li>
+                      <li><a class="dropdown-item" href="program-kerja.html">Program Kerja</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="publikasiDropdown" role="button" aria-expanded="false">
+                      Publikasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="publikasiDropdown">
+                      <li><a class="dropdown-item" href="opini.html">Opini</a></li>
+                      <li><a class="dropdown-item" href="rilis-kegiatan.html">Rilis Kegiatan</a></li>
+                    </ul>
+                  </li>
+                  <a class="nav-link" href="#gallery">Layanan Kader</a>
+                  <a class="nav-link" href="#rsvp">Tentang</a>
+                  <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#searchBar" aria-expanded="false" aria-controls="searchBar">
+                    <i class="bi bi-search"></i> </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="collapse" id="searchBar">
+        <div class="py-3 bg-white border-bottom">
+          <div class="container">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Cari di website..." aria-label="Cari di website">
+              <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <section id="rilis-list" class="rilis-page-section">
+      <div class="container">
+        <h2>Semua Rilis Kegiatan</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="rilis-page-card">
+              <img src="https://picsum.photos/id/355/300/200" class="card-img-top" alt="Thumbnail Rilis 1">
+              <div class="card-body">
+                <div class="meta-info">
+                  <span class="category"><i class="bi bi-tag-fill"></i> Rilis Kegiatan</span>
+                  <span class="date ms-2"><i class="bi bi-calendar-event"></i> April 15, 2025</span>
+                </div>
+                <h5 class="card-title">Workshop Kepemimpinan Digital: Membangun Kader Melek Teknologi</h5>
+                <p class="card-text">Laporan kegiatan workshop yang berfokus pada peningkatan kemampuan kepemimpinan di era digital.</p>
+                <a href="#" class="btn-read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="rilis-page-card">
+              <img src="https://picsum.photos/id/356/300/200" class="card-img-top" alt="Thumbnail Rilis 2">
+              <div class="card-body">
+                <div class="meta-info">
+                  <span class="category"><i class="bi bi-tag-fill"></i> Rilis Kegiatan</span>
+                  <span class="date ms-2"><i class="bi bi-calendar-event"></i> Maret 10, 2025</span>
+                </div>
+                <h5 class="card-title">Bakti Sosial Ramadhan: Berbagi Kebahagiaan di Bulan Suci</h5>
+                <p class="card-text">Kegiatan bakti sosial yang melibatkan seluruh anggota dalam menyemarakkan bulan Ramadhan dengan berbagi kepada masyarakat.</p>
+                <a href="#" class="btn-read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="rilis-page-card">
+              <img src="https://picsum.photos/id/357/300/200" class="card-img-top" alt="Thumbnail Rilis 3">
+              <div class="card-body">
+                <div class="meta-info">
+                  <span class="category"><i class="bi bi-tag-fill"></i> Rilis Kegiatan</span>
+                  <span class="date ms-2"><i class="bi bi-calendar-event"></i> Februari 20, 2025</span>
+                </div>
+                <h5 class="card-title">Diskusi Publik: Peran Mahasiswa dalam Pengawasan Kebijakan Publik</h5>
+                <p class="card-text">Ringkasan diskusi publik yang membahas bagaimana mahasiswa dapat aktif berkontribusi dalam mengawasi dan memberikan masukan terhadap kebijakan pemerintah.</p>
+                <a href="#" class="btn-read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-col">
+            <img src="img/logo.png" alt="Logo Korps Instruktur" class="footer-logo">
+            <p>Korps Instruktur PC IMM Djazman Al Kindi Kota Yogyakarta adalah wadah pengembangan kader instruktur yang profesional dan berintegritas.</p>
+            <div class="footer-social-icons">
+              <a href="https://instagram.com/pciimmdjazmanalkindi" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h5>Tautan Cepat</h5>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="struktural.html">Struktural</a></li>
+              <li><a href="bidang.html">Bidang</a></li>
+              <li><a href="program-kerja.html">Program Kerja</a></li>
+              <li><a href="opini.html">Opini</a></li>
+              <li><a href="rilis-kegiatan.html">Rilis Kegiatan</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-col">
+            <h5>Kontak Kami</h5>
+            <ul>
+              <li><i class="bi bi-geo-alt-fill"></i> Jl. Sultan Agung No.14, Wirogunan, Kec. Mergangsan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55151</li>
+              <li><i class="bi bi-envelope-fill"></i> neokorpsinstrukturdjazman@gmail.com</li>
+              <li><i class="bi bi-phone-fill"></i> +62 812-3456-7890</li>
+            </ul>
+            <p class="mt-3">Jam Kerja: Setiap hari sampe kiamat, kecuali lagi tidur</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p class="copyright-text">© 2025 Korps Instruktur Djazman. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+    <script>
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
+
+      offcanvas.addEventListener('show.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'visible';
+      });
+
+      offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+        stickyTop.style.overflow = 'hidden';
+      });
+    </script>
+  </body>
+</html>
